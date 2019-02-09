@@ -113,14 +113,15 @@ Log the result of your new array. */
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-let uni = [];
 
-for (i = 0; i < graduates.length; i++){
-  
-  uni.push(graduates[i].university)
-
+for (i = 0; i < graduates.length; i++) {
+  let x = graduates[i].university.includes("Uni");
+  if (x === true) {
+    uni.push(`${graduates[i].university}`);
+  }
 }
-console.log(uni.includes('Uni'));
+
+ console.log(uni);
 
 
 // ***QUESTION ABOUT THIS  ^^^^*****
